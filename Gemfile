@@ -55,6 +55,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 gem "bulma-rails", "~> 0.9.4"
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-gem 'refile-mini_magick'
+#//画像アップロード
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
 
