@@ -16,9 +16,9 @@
           <div class="card">
             <div class="card-content">
               <% if user.image.attached?%>
-                <%= image_tag(user.image, :size => "200x") %>
+                <p><%= image_tag(user.image, class: 'image') %></p>
               <% else %>
-                <%= image_tag("no-image.png", :size => "200x") %>
+                <p><%= image_tag("no-image.png", class: 'image') %></p>
               <% end %>
             </div>
             <div class="card-content">
