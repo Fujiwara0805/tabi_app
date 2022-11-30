@@ -36,16 +36,26 @@
 
       <% if user_signed_in? %>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-end">
+          <div class="navbar-item">
+            <%= link_to "Tabi一覧", places_path, class: "navbar-item button is-warning is-light" %>
+          </div>
+          <div class="navbar-item">
+            <%= link_to "Tabi投稿", new_place_path, class: "navbar-item button is-warning is-light" %>
+          </div>
+
+        <div class="navbar-end">
             <div class="navbar-item">
-            </div>
-            <div class="field is-grouped">
-              <p class="control">
-                <%= link_to "旅グラム一覧", users_path, class: "button is-warning is-light" %>
-              </p>  
-              <p class="control">
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
-              </p>
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "Tabiグラマー一覧", users_path, class: " button is-warning is-light" %>
+                </p>
+                <p class="control">
+                  <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "button is-warning is-light" %>
+                </p>
+              </div>
             </div>
           </div>
         </div>

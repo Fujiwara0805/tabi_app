@@ -1,0 +1,36 @@
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        新しいスポットの紹介
+      </h1>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <%= form_with(model: @place, url:places_path, local: true, method: :post) do |f| %>
+          <div class="field">
+            <div class="label">場所名</div>
+            <%= f.text_field :title, class:"input" %>
+          </div>
+
+          <div class="field">
+            <div class="label">魅力</div>
+            <%= f.text_field :body, class:"textarea" %>
+          </div>
+
+          <div class="field">
+            <div class="label">写真</div>
+            <%= f.file_field :image, class:"input" %>
+          </div>
+
+          <%= f.submit '投稿', class: "button is-success" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
